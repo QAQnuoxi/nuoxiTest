@@ -1,11 +1,12 @@
 package main
 
-import "nuoxiTest/tools"
+import (
+	"nuoxiTest/tools/area"
+)
 
 func main() {
-	tools.Persons()
-	tools.Circle()
-	tools.Rectangle()
+	area.Circle()
+	area.Rectangle()
 }
 
 //git test

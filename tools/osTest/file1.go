@@ -1,10 +1,13 @@
-package tools
+package osTest
 
 import "os"
 
 func File1() {
 	path := "all/directory"
-	os.MkdirAll(path, 0777)
+	err := os.MkdirAll(path, 0777)
+	if err != nil {
+		return
+	}
 	userFile := path + "/astaxie.txt"
 	files, _ := os.Create(userFile)
 	files.Write([]byte("hgajkgdasgga"))
