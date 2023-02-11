@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 )
 
+// 扫描指定的目录，删除文件中的内容，将文件添加.md后缀
 func checkIgnore(path string, ignores []string) bool {
 	for _, ignore := range ignores {
 		matched, _ := filepath.Match(ignore, filepath.Base(path))
